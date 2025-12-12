@@ -10,7 +10,7 @@ import { CartProvider } from "./context/CartContext";
 import Navbar from "./components/Common/Navbar";
 import ProtectedRoute from "./components/Common/ProtectedRoute";
 import Login from "./components/auth/Login";
-// import Register from "./components/auth/Register";
+import Register from "./components/auth/Register";
 import SweetCard from "./components/Dashboard/SweetCard";
 import CartPage from "./components/Common/CartPage";
 import AdminDashboard from "./components/admin/AdminDashboard";
@@ -59,10 +59,10 @@ function AppContent() {
             path="/login"
             element={user ? <Navigate to="/" /> : <Login />}
           />
-          {/* <Route
-            // path="/register"
-            // element={user ? <Navigate to="/" /> : <Register />}
-          /> */}
+          <Route
+            path="/register"
+            element={user ? <Navigate to="/" /> : <Register />}
+          />
           <Route
             path="/"
             element={
